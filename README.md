@@ -3,9 +3,13 @@
 ## Pattern Printing
 **MySQL**:
 0
+
 0 0
+
 0 0 0
-0 0 0 0 
+
+0 0 0 0
+
 0 0 0 0 0
 
 **code**:
