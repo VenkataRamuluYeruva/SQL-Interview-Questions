@@ -1,7 +1,7 @@
 # SQL-Interview-Questions
 
 ## Pattern Printing
-**MySQL**:
+
 0
 
 0 0
@@ -12,7 +12,7 @@
 
 0 0 0 0 0
 
-**code**:
+**MySQL code**:
 ```
 DELIMETER $$
 -- create procedure and take input value (R)
@@ -29,4 +29,17 @@ DELIMITER ;
 
 -- call procedure
 CALL PATTERN(5);
+```
+**MS SQL Server Code**:
+```
+CREATE PROCEDURE PATTERN(@R INT)
+AS
+BEGIN
+  DECLARE @i INT = 1;
+  WHILE @i <= @R
+  BEGIN
+    SELECT REPLICATE('0',@i);
+    SET @i=@i-1;
+  END
+END
 ```
