@@ -1,3 +1,5 @@
+# Node.js and Express.js security methods.
+
 ```
 const express = require('express');
 const bodyParser = require('body-parser');
