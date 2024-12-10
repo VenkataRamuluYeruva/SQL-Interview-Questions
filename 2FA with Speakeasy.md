@@ -1,3 +1,5 @@
+# Tow Factor Authentication(2FA) with speakeasy in Node.js
+
 ### **Speakeasy Middleware: A Detailed Overview**
 
 **Speakeasy** is a Node.js library that helps implement Two-Factor Authentication (2FA) using Time-based One-Time Passwords (TOTP). TOTP is the widely-used algorithm behind many 2FA systems (e.g., Google Authenticator, Authy, etc.). This method adds an extra layer of security to an application by requiring users to provide not only their password but also a temporary code generated on their mobile devices.
