@@ -1,4 +1,6 @@
-Yes, I understand the concept you're referring to. In chat applications, when a user sends messages to another user, but the receiver is busy (or not actively engaged with the sender), the system should:
+# Notification System in Node.js with Redis
+
+In chat applications, when a user sends messages to another user, but the receiver is busy (or not actively engaged with the sender), the system should:
 
 - Keep track of the number of unread messages (notifications) for each user.
 - Display a notification badge next to the sender’s name or profile to indicate how many unread messages they have.
