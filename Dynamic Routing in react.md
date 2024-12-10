@@ -1,4 +1,6 @@
-Certainly! Below is a comprehensive code example for dynamic routing in React, based on data fetched from a table. It includes explanations at every step, as well as a `README.md` file format for future reference. This structure follows a clean, production-ready approach with clear comments and explanations, suitable for both developers and team members.
+# Dynamic Routing in React
+
+Below is a comprehensive code example for dynamic routing in React, based on data fetched from a table. It includes explanations at every step, as well as a `README.md` file format for future reference. This structure follows a clean, production-ready approach with clear comments and explanations, suitable for both developers and team members.
 
 ---
 
