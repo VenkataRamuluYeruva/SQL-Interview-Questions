@@ -1,4 +1,4 @@
-### WebRTC for Audio and Video Calling: Full Stack Implementation
+# WebRTC for Audio and Video Calling: Full Stack Implementation
 
 WebRTC (Web Real-Time Communication) is a protocol that allows peer-to-peer communication directly between browsers. It facilitates real-time communication without requiring plugins. WebRTC can be used for video, audio calling, and file sharing. For a production-level system that supports multiple users, we'll use WebSockets for signaling (to exchange messages like offer, answer, ICE candidates) and WebRTC for the actual peer-to-peer communication.
 
