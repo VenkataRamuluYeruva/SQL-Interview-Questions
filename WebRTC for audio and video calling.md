@@ -108,24 +108,6 @@ const App = () => {
   const [peerConnections, setPeerConnections] = useState({});
   const [localStream, setLocalStream] = useState(null);
 
-  const { sendMessage, lastMessage } = useWebSocket("ws://localhost:5000", {
-    onOpen: () => console.log("WebSocket Connected"),
-    onMessage: handleSignalingMessage,
-  });
-
-  const localVideoRef = useRef(null);
-  const remoteVideoRef = useRef(null);
-
-  useEffect(() => {
-    navigator.mediaDevices
-      .getUserMedia({ audio: true, video: true })
-      .then((stream) => {
-        setLocalStream(stream);
-        localVideoRef.current.srcObject = stream;
-      })
-      .catch((err) => console.error("Failed to get media: ", err));
-  }, []);
-
   // Handle signaling messages
   const handleSignalingMessage = (event) => {
     const message = JSON.parse(event.data);
@@ -143,6 +125,24 @@ const App = () => {
         break;
     }
   };
+
+  const { sendMessage, lastMessage } = useWebSocket("ws://localhost:5000", {
+    onOpen: () => console.log("WebSocket Connected"),
+    onMessage: handleSignalingMessage, // Now handleSignalingMessage is defined above
+  });
+
+  const localVideoRef = useRef(null);
+  const remoteVideoRef = useRef(null);
+
+  useEffect(() => {
+    navigator.mediaDevices
+      .getUserMedia({ audio: true, video: true })
+      .then((stream) => {
+        setLocalStream(stream);
+        localVideoRef.current.srcObject = stream;
+      })
+      .catch((err) => console.error("Failed to get media: ", err));
+  }, []);
 
   const handleOffer = (message) => {
     const peerConnection = new RTCPeerConnection();
@@ -199,14 +199,12 @@ const App = () => {
     peerConnection.addIceCandidate(new RTCIceCandidate(message.candidate));
   };
 
-  // Join the call
   const joinCall = () => {
     setIsJoined(true);
     setUserId(`user-${Date.now()}`);
     sendMessage(JSON.stringify({ type: "join", userId }));
   };
 
-  // Start call (Offer to other users)
   const startCall = (targetId) => {
     const peerConnection = new RTCPeerConnection();
     localStream.getTracks().forEach((track) => {
