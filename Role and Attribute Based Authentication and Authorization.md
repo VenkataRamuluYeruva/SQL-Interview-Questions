@@ -1,4 +1,4 @@
-### Role-Based Authentication and Authorization
+## Role-Based Authentication and Authorization
 **Role-Based Authentication and Authorization (RBAC)** is a security mechanism where access to resources is granted based on roles assigned to users. Each role is associated with a set of permissions that define what actions users in that role can perform.
 
 ### Key Concepts in RBAC:
@@ -182,7 +182,7 @@ SECRET_KEY=your_secret_key
 ### Final Note:
 RBAC is highly scalable and secure. Integrating it with Node.js and MSSQL provides a robust system for managing user access efficiently.
 
-### Attribute-Based Authentication and Authorization (ABAC)
+## Attribute-Based Authentication and Authorization (ABAC)
 **Attribute-Based Authentication and Authorization (ABAC)** is a security mechanism where access to resources is determined by evaluating attributes associated with users, resources, actions, or the environment. ABAC provides more fine-grained control compared to Role-Based Access Control (RBAC).
 
 ---
